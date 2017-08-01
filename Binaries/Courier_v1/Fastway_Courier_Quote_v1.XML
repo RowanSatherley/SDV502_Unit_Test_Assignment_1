@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fastway_Courier_Quote_v1</name>
+    </assembly>
+    <members>
+        <member name="M:FastwayCourier.ParcelQuoteFromNelson.GetDestinationZone(System.String)">
+            <summary>
+            GetDestinationZone() is used to lookup the the coloured zone for pricing of a specified delivery destination - town, city, etc.    
+            </summary>
+            <param name="destination">
+            Specifies the location where a parcel may be delivered - town, city, etc.
+            
+            KeyNotFoundException is thrown if the destination specified does not exist or is invalid.
+            </param>
+            <returns>
+            A string value containing the coloured zone where the specified destination location exists.
+            </returns>
+        </member>
+        <member name="M:FastwayCourier.ParcelQuoteFromNelson.CalculateQuote(System.Decimal,System.String)">
+            <summary>
+            CalculateQuote() is used to get a price and the amount of excess tickets needed for a parcel of certain weight being delivered within a specified colour zone.
+            </summary>
+            <param name="weight">
+            Specifies the weight of the parcel to be delivered in kilograms. 
+            
+            ArgumentOutOfRangeException thrown if the weight is 0 or less.
+            ArgumentOutOfRangeException thrown if the weight is greater than 25.
+            
+            </param>
+            <param name="zone">
+            Specifies the coloured zone where the parcel is to be delivered.
+            
+            KeyNotFoundException thrown if the delivery zone doesn't exist or is invalid.
+            
+            </param>
+            <returns>
+            An object containing the total quoted price, and number of excess tickets to be used.
+            </returns>
+        </member>
+    </members>
+</doc>
