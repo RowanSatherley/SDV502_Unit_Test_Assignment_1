@@ -16,7 +16,6 @@ namespace SDV502_UnitTestAss1
             // Act
             Dictionary<string, string> Places = new Dictionary<string, string>()
             {
-
                 {"Motueka","Pink"},
                 {"Mapua","Pink"},
                 {"Atawhai","Pink"},
